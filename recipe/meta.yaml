@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 3
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -35,6 +35,7 @@ about:
   home: https://github.com/GoogleCloudPlatform/google-auth-library-python-httplib2
   license: Apache-2.0
   license_family: Apache
+  license_file: LICENSE
   summary: 'Google Authentication Library httplib2 transport'
   description: This library provides an httplib2 transport for google-auth. Note that httplib has
     lots of problems such as lack of threadsafety and insecure usage of TLS. Using it is highly
@@ -45,7 +46,8 @@ about:
 
 extra:
   recipe-maintainers:
-    - parthea
     - jreback
-    - tswast
+    - leahecole
+    - parthea
     - theacodes
+    - tswast
