@@ -5,7 +5,7 @@ Home: https://github.com/GoogleCloudPlatform/google-auth-library-python-httplib2
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Google Authentication Library httplib2 transport
 
