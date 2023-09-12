@@ -1,7 +1,6 @@
 {% set name = "google-auth-httplib2" %}
 {% set version = "0.1.1" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -22,8 +21,7 @@ requirements:
   run:
     - python >=3.6
     - google-auth
-    - httplib2 >=0.15.0
-    - six
+    - httplib2 >=0.19.0
 
 test:
   imports:
@@ -47,7 +45,6 @@ extra:
   recipe-maintainers:
     - xylar
     - jreback
-    - leahecole
     - parthea
     - theacodes
     - tswast
