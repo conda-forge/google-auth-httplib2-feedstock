@@ -1,16 +1,16 @@
 {% set name = "google-auth-httplib2" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/google-auth-httplib2-{{ version }}.tar.gz
-  sha256: 38aa7badf48f974f1eb9861794e9c0cb2a0511a4ec0679b1f886d108f5640e05
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 5ef03be3927423c87fb69607b42df23a444e434ddb2555b73b3679793187b7de
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,8 +21,8 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - google-auth
-    - httplib2 >=0.19.0
+    - google-auth >=1.32.0,<3.0.0
+    - httplib2 >=0.19.0,<1.0.0
 
 test:
   imports:
