@@ -1,5 +1,5 @@
 {% set name = "google-auth-httplib2" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 5ef03be3927423c87fb69607b42df23a444e434ddb2555b73b3679793187b7de
+  sha256: 177898a0175252480d5ed916aeea183c2df87c1f9c26705d74ae6b951c268b0b
 
 build:
   number: 0
