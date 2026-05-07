@@ -1,0 +1,52 @@
+schema_version: 1
+
+context:
+  name: google-auth-httplib2
+  version: "0.4.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: d5b030a204b7a4b4d553ba9ca701b62481ee2b74419325580be70f7d85ffed35
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - google-auth >=1.32.0,<3.0.0
+    - httplib2 >=0.19.0,<1.0.0
+
+tests:
+  - python:
+      imports:
+        - google_auth_httplib2
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  license: Apache-2.0
+  license_file: LICENSE
+  summary: Google Authentication Library httplib2 transport
+  description: This library provides an httplib2 transport for google-auth. Note that httplib has lots of problems such as lack of threadsafety and insecure usage of TLS. Using it is highly discouraged. This library is intended to help existing users of oauth2client migrate to google-auth.
+  homepage: https://github.com/GoogleCloudPlatform/google-auth-library-python-httplib2
+  repository: https://github.com/GoogleCloudPlatform/google-auth-library-python-httplib2
+  documentation: https://google-auth.readthedocs.io/en/latest/
+
+extra:
+  recipe-maintainers:
+    - xylar
+    - jreback
+    - parthea
+    - theacodes
+    - tswast
