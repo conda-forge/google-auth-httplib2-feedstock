@@ -31,15 +31,17 @@ tests:
       imports:
         - google_auth_httplib2
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version: 
+        - ${{ python_min }}
+        - "*"
 
 about:
   license: Apache-2.0
   license_file: LICENSE
   summary: Google Authentication Library httplib2 transport
   description: This library provides an httplib2 transport for google-auth. Note that httplib has lots of problems such as lack of threadsafety and insecure usage of TLS. Using it is highly discouraged. This library is intended to help existing users of oauth2client migrate to google-auth.
-  homepage: https://github.com/GoogleCloudPlatform/google-auth-library-python-httplib2
-  repository: https://github.com/GoogleCloudPlatform/google-auth-library-python-httplib2
+  homepage: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-auth-httplib2
+  repository: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-auth-httplib2
   documentation: https://google-auth.readthedocs.io/en/latest/
 
 extra:
