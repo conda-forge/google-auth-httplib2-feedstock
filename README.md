@@ -3,13 +3,13 @@ About google-auth-httplib2-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-auth-httplib2-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/GoogleCloudPlatform/google-auth-library-python-httplib2
+Home: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-auth-httplib2
 
 Package license: Apache-2.0
 
 Summary: Google Authentication Library httplib2 transport
 
-Development: https://github.com/GoogleCloudPlatform/google-auth-library-python-httplib2
+Development: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-auth-httplib2
 
 Documentation: https://google-auth.readthedocs.io/en/latest/
 
