@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-auth-httplib2
-  version: "0.4.2"
+  version: "0.4.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 916225a6367e613c9af44d83f41688a599d3f687777846b8b91bec65085ed1f1
+  sha256: 0ba8d2eeab86e820f23466f57c45d509052db0a5f1bef6ed1cf92e4bb75b847d
 
 build:
   number: 0
